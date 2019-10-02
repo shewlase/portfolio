@@ -2,19 +2,32 @@
 html, body
 {
 	margin: 0;
-	background-color: rgba(1,13,127,1);
+	/* background-color: rgba(1,13,127,1); */
+	background-color: #A5C4D4;
 	color: white;
+	/* overflow: hidden; */
 	overflow-x: hidden;
+	perspective: 1000px;
+	animation: perspective 20s infinite;
+	height: 100vh;
 	/* scroll-behavior: smooth; */
 	/* scroll-snap-type: mandatory; */
     /* scroll-snap-points-y: repeat(100vh); */
     /* scroll-snap-type: y mandatory; */
 }
 
+/* #backgroundCircles
+{
+	perspective: 1000px;
+	height: 200vh;
+	position: absolute;
+	width: 100vw;
+} */
+
 h1
 {
-	bottom:10%;
-	right: 7%;
+	top:0%;
+	left: 7%;
 }
 
 h2
@@ -30,7 +43,7 @@ h3
 	width: 100%;
 	transform: translateZ(70px);
 	bottom: -10%;
-	
+
 	pointer-events: none;
 }
 
@@ -47,8 +60,8 @@ h4
 	position: absolute;
 	font-family: 'Righteous', cursive;
 	font-size: 3vw;
-	bottom:0%;
-	right: 7%;
+	top:10%;
+	left: 7%;
 }
 
 a
@@ -56,7 +69,7 @@ a
 	text-decoration: none;
 }
 
-a:visited { 
+a:visited {
   color: white;
 }
 
@@ -66,13 +79,6 @@ a:visited {
 	margin: 0;
 	width: 100%;
 	height: 99vh;
-	/* background-color: black;	 */
-	background-image: linear-gradient(rgba(1,0,41,1), rgba(1,13,127,1));	
-	/* background-image: url("stars.png") , linear-gradient(rgba(1,0,41,1), rgba(1,13,127,1)); */
-	/* background-image: url("test2.jpg") , linear-gradient(rgba(1,0,41,1), rgba(1,13,127,1)); */
-	/* background-size: 70%, auto; */
-	/* scroll-snap-stop: always; */
-	/* scroll-snap-align: start; */
 }
 
 #earth
@@ -83,7 +89,7 @@ a:visited {
 	position: absolute;
 	animation: spin 160s infinite linear;
 }
-@keyframes spin 
+@keyframes spin
 {
     from {transform:rotate(0deg);}
     to {transform:rotate(360deg);}
@@ -112,7 +118,7 @@ a:visited {
 	/* animation: orbit 80s infinite, spin 20s infinite linear; */
 }
 
-@keyframes orbit 
+@keyframes orbit
 {
     from {transform: rotate(-30deg) translate(25vw) rotate(30deg) ;}
     to {transform: rotate(160deg) translate(25vw) rotate(-160deg) ;}
@@ -149,14 +155,14 @@ a:visited {
   }
   25%
   {
-	bottom: 5vh;  
+	bottom: 5vh;
   }
   50% {
     bottom: 7vh;
   }
   75%
   {
-	bottom: 5vh;  
+	bottom: 5vh;
   }
   100% {
     bottom: 5vh;
@@ -171,7 +177,7 @@ a:visited {
 	height: 100vh;
 	top: 99vh;
 	/* background-color:rgba(1,13,127,1); */
-	background-color: rgb(1,13,127,1);
+	/* background-color: rgb(1,13,127,1); */
 	background-size: 100%, auto;
 	background-repeat: no-repeat;
 	background-position: center bottom;
@@ -205,7 +211,7 @@ a:visited {
 }
 
 .fromRight
-{	
+{
 	/* top: 15%; */
 	animation: cloudsFromRight 120s infinite linear;
 }
@@ -237,12 +243,12 @@ a:visited {
 {
 	/* border-style: solid;
 	border-color: white; */
-	/* display: block; 
-	margin-left: auto; 
-	margin-right: auto; 
-	border: 1px solid; 
-	background-color: black; 
-	background-size: cover; 
+	/* display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid;
+	background-color: black;
+	background-size: cover;
 	background-image: url(loadbg); */
 	/* for star orbit not showing edge (i.e. if 100%*/
 	top: -40vh;
@@ -261,7 +267,7 @@ a:visited {
     transform: rotate(0deg);
   }
 	50%{
-		
+
     transform: rotate(30deg);
 	}
   100% {
@@ -269,46 +275,31 @@ a:visited {
   }
 }
 
-.overlay
-{
-	/* z-index: 2; */
-	top: 0;
-	left: 0;
-	position: absolute;
-	margin: 0;
-	width: 100%;
-	height: 99vh;
-	background-image: linear-gradient(rgba(1,0,41,0.3), rgba(1,13,127,0.3));
-}
-
-
-
-
 
 .circleDiv
 {
 	border-radius: 50%;
 	width:50vw;
 	/* background-color: rgba(255, 215, 119, 1); */
-	
+
 	background-color: rgba(240, 200, 8, 1);
-	
+
 	/* transition:   background 3s ease 3s; */
 }
 
 .circleDiv img
-{	
+{
 	pointer-events: none;
 }
 
 .subCircleDiv
 {
 	border-radius: 50%;
-	
+
 	/* background-color: rgba(255, 215, 119, 0); */
-	
+
 	background-color: rgba(240, 200, 8, 0);
-	
+
 }
 
 .subCircleDiv:hover .sub3d
@@ -320,7 +311,7 @@ a:visited {
 .games
 {
 	/* background-color: 	rgba(51, 153, 153, 1); */
-	
+
 	background-color: rgba(6,174,213, 1);
 }
 
@@ -336,10 +327,10 @@ a:visited {
 	width: 25vw;
 	display: flex;
 	margin: 0 auto;
-	perspective-origin: 50% 50%;
+	/* perspective-origin: 50% 50%; */
 	transform-style: preserve-3d;
-	
-	
+	top: 20vh;
+	position: relative;
 }
 
 .mainSquare:hover
@@ -358,11 +349,22 @@ a:visited {
 	margin: auto;
 	position: absolute;
 	top: -10%; left: 0; bottom: 0; right: 0;
-	
-	-ms-transform: translateZ(100px); 
-    -webkit-transform: translateZ(100px); 
+
+	-ms-transform: translateZ(100px);
+    -webkit-transform: translateZ(100px);
     transform: translateZ(100px);
 	opacity: 1;
+}
+
+#top .circleDiv
+{
+	background-color: white;
+}
+
+#top .circleDiv h3
+{
+	color: #7B6D8D;
+	top: 8%;
 }
 
 /* .circleDiv h1
@@ -387,7 +389,7 @@ a:visited {
 {
 	/* Eye BG */
 	/* background-color: rgba(255, 215, 119, 1); */
-	
+
 	background-color: rgba(240, 200, 8, 1);
 }
 
@@ -407,7 +409,7 @@ a:visited {
 {
 	/* other BG */
 	/* background-color: rgba(51, 153, 153, 1); */
-	
+
 	background-color: rgba(221,28,26, 1);
 }
 
@@ -455,7 +457,7 @@ a:visited {
 .sub img
 {
 	width:70%;
-	
+
 	margin: auto;
 	position: absolute;
 	top: 0%; left: 0; bottom: 0; right: 0;
@@ -490,7 +492,7 @@ a:visited {
 .topLeft
 {
 	top: 0;
-	left: 0;	
+	left: 0;
 	/* transform: translateZ(50px); */
 }
 
@@ -511,7 +513,7 @@ a:visited {
 .botRight
 {
 	bottom: 0;
-	right: 0;	
+	right: 0;
 	/* transform: translateZ(100px); */
 }
 
@@ -523,15 +525,34 @@ a:visited {
 	/* margin-left: auto;
 	margin-right: auto;	 */
 }
+
+.randomDiv
+{
+	width: 100px;
+
+	height: 100px;
+	/* background-color: blue; */
+	position: absolute;
+	opacity: 0.5;
+	border-radius: 50%;
+	border: 10px solid red;
+	/* animation: pers 3s infinite; */
+
+}
 /*TODO: should be only for scale and rotate z, translate z */
-.animated 
+.animated
 {
 	-webkit-transition: all 0.5s ease 0s;
 	-moz-transition: all 0.5s ease 0s;
 	-o-transition: all 0.5s ease 0s;
 	-ms-transition: all 0.5s ease 0s;
 	/* transition:   transform 1s ease 2s;  */
-	transition:   transform 0.25s ease 0s opacity 0.5s ease 0s; 
+	transition:   transform 0.25s ease 0s opacity 0.5s ease 0s;
+}
+
+#top .animated
+{
+	transition: all 1s ease 0s;
 }
 
 .subImageAnimated
@@ -553,6 +574,16 @@ a:visited {
        url('../fonts/righteous-v8-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+
+@keyframes perspective
+{
+	 0% { perspective-origin: 40% 0%;}
+	 25% { perspective-origin: 60% 0%;}
+	 50% { perspective-origin: 60% 30%;}
+	 75% { perspective-origin: 40% 30%;}
+	 100% { perspective-origin: 40% 0%;}
+}
+
 ----------------------------------------------------------
 /* #container {
   margin-top: 20px;
@@ -564,7 +595,7 @@ a:visited {
 .pulse {
   width: 10px;
   height: 10px;
-  
+
   border: 5px solid #f7f14c;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
@@ -640,4 +671,3 @@ a:visited {
     opacity: 0.0;
  }
 } */
-
