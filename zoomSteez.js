@@ -2,6 +2,7 @@
 
 var divAmount = 150;
 var colours = ['#593F62','#7B6D8D','#8499B1'];
+//89, 63, 98    123, 109, 141     132, 153, 177
 init();
 var zPositions;
 var screenWidth;
