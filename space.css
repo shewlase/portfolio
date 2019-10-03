@@ -16,17 +16,11 @@ html, body
     /* scroll-snap-type: y mandatory; */
 }
 
-/* #backgroundCircles
-{
-	perspective: 1000px;
-	height: 200vh;
-	position: absolute;
-	width: 100vw;
-} */
+
 
 h1
 {
-	top:0%;
+	top:-5%;
 	left: 7%;
 }
 
@@ -60,8 +54,10 @@ h4
 	position: absolute;
 	font-family: 'Righteous', cursive;
 	font-size: 3vw;
-	top:10%;
+	top:5%;
 	left: 7%;
+
+	color: #f0c808;
 }
 
 a
@@ -81,60 +77,6 @@ a:visited {
 	height: 99vh;
 }
 
-#earth
-{
-	top: -12vw;
-	left: -15.025%;
-	height: 40vw;
-	position: absolute;
-	animation: spin 160s infinite linear;
-}
-@keyframes spin
-{
-    from {transform:rotate(0deg);}
-    to {transform:rotate(360deg);}
-}
-
-#earthShadow
-{
-	top: -12vw;
-	left: -15%;
-	height: 40vw;
-	position: absolute;
-	transform: rotate(25deg);
-}
-
-#mars
-{
-	position: absolute;
-	top: 5vw;
-	left: 2.5vw;
-	/* left: 50%; set at 0% of keyframes*/
-	height: 11vw;
-	x-transition: all 1s linear;
-	animation: orbit 160s infinite linear;
-	transform-origin: -30vw;
-	/* transform: rotate(-30deg) translate(30vw) rotate(30deg) */
-	/* animation: orbit 80s infinite, spin 20s infinite linear; */
-}
-
-@keyframes orbit
-{
-    from {transform: rotate(-30deg) translate(25vw) rotate(30deg) ;}
-    to {transform: rotate(160deg) translate(25vw) rotate(-160deg) ;}
-}
-/* @keyframes orbit {
-  0% {
-    left: 15%;
-  }
-  50% {
-    left: 25%;
-  }
-  100% {
-    left: 15%;
-  }
-} */
-
 #down
 {
 	position: absolute;
@@ -147,6 +89,26 @@ a:visited {
 #down:hover
 {
 	cursor: pointer;
+}
+
+.menuIcons
+{
+	width: 5vw;
+	position: absolute;
+	top: 4vh;
+}
+
+#githubIcon
+{
+	right: 3vw;
+}
+#cvIcon
+{
+	right: 10vw;
+}
+#contactIcon
+{
+	right: 17vw;
 }
 
 @keyframes bounceDown {
