@@ -21,8 +21,16 @@ html, body
 
 h1
 {
-	top: 1vh;
-	left: 7%;
+	top: -2vw;
+	left: 7vw;
+}
+
+#mainTitle
+{
+	/* margin-top: 2vw; */
+	/* top: 0; */
+	/* width: 30%; */
+	position: fixed;
 }
 
 h2
@@ -55,7 +63,7 @@ h4
 	position: absolute;
 	font-family: 'Righteous', cursive;
 	font-size: 3vw;
-	top:5vh;
+	top:3vw;
 	left: 7%;
 
 	color: #f0c808;
@@ -119,7 +127,7 @@ a:visited {
 .menuIcons
 {
 	width: 5vw;
-	position: absolute;
+	position: fixed;
 	top: 4vh;
 }
 
@@ -340,6 +348,7 @@ a:visited {
 
 .mainSquare:hover p
 {
+	transform: translateZ(0vw);
 	opacity: 0;
 }
 
@@ -463,6 +472,56 @@ a:visited {
 	/* animation: pers 3s infinite; */
 
 }
+
+
+.caseStudy
+{
+	position: absolute;
+	width: 90vw;
+	left: 5vw;
+	/* margin-left: auto;
+	margin-right: auto; */
+	top: 5vw;
+	background-color: rgba(255,255,255, 0.8);
+	display: none;
+	opacity: 0;
+}
+
+.caseStudy h1
+{
+	position: relative;
+	width: 85%;
+	text-align: center;
+	color: #7B6D8D;
+}
+
+.caseStudy p
+{
+	width: 50%;
+	color: black;
+	position: relative;
+	transform: translateZ(0vw);
+	font-size: 1.7vw;
+	margin-bottom: 5vw;
+	left: 5vw;
+	text-align: justify;
+}
+
+.caseVid
+{
+	position: relative;
+	width: 80vw;
+	height: 42vw;
+	left: 5vw;
+}
+
+.caseStudy img
+{
+	width: 35vw;
+	margin-left: 5vw;
+	margin-bottom: 5vw;
+}
+
 /*TODO: should be only for scale and rotate z, translate z */
 .animated
 {
@@ -472,6 +531,16 @@ a:visited {
 	-ms-transition: all 0.5s ease 0s;
 	/* transition:   transform 1s ease 2s;  */
 	transition:   transform 0.25s ease 0s opacity 0.5s ease 0s;
+}
+
+.animatedCircles
+{
+	transition: all 4s ease 0s;
+}
+
+.animatedTop
+{
+	transition: all 2s ease 0s;
 }
 
 #top .animated

@@ -29,7 +29,7 @@ function init()
 		// add the text node to the newly created div
 		// newDiv.appendChild(newContent);
 		newDiv.classList.add("randomDiv");
-		newDiv.classList.add("animated");//needs its own class for this
+		newDiv.classList.add("animatedCircles");//needs its own class for this
 		/* newDiv.classList.add("pulse"); */
 		//random x y and z position
 		//x and y between 20 and 70%
@@ -61,27 +61,62 @@ function init()
 	}
 }
 
-function goNextPage()
+function goNextPage(nextPage)
 {
 
 	zoomAllRandomDivs();
 	//fade h1 and text, replace with new page
-	document.getElementById('title').style.opacity = 0;
-	document.getElementsByClassName('text')[0].style.opacity = 0;
+	// document.getElementById('title').style.opacity = 0;
+	// document.getElementsByClassName('text')[0].style.opacity = 0;
+	document.getElementById('top').style.opacity = 0;
+	document.getElementById('main').style.display = 'none';
+	if(nextPage == 'siteme')
+	{
+		document.getElementById('siteMeCase').style.display = 'block';
+	}
+	else if (nextPage == 'tanx')
+	{
+		document.getElementById('tanxCase').style.display = 'block';
+	}
+	else if (nextPage == 'home')
+	{
+		document.getElementById('top').style.display = 'block';
+		document.getElementById('main').style.display = 'block';
+		document.getElementById('siteMeCase').style.opacity = 0;
+		document.getElementById('tanxCase').style.opacity = 0;
+	}
 	setTimeout(function(){
+		//after transition, show next page
+		if(nextPage == 'siteme')
+		{
+			document.getElementById('top').style.display = 'none';
+			document.getElementById('siteMeCase').style.opacity = 1;
+		}
+		else if (nextPage == 'tanx')
+		{
+			document.getElementById('top').style.display = 'none';
+			document.getElementById('tanxCase').style.opacity = 1;
+		}
+		else if (nextPage == 'home')
+		{
+			document.getElementById('top').style.opacity = 1;
+			document.getElementById('siteMeCase').style.display = 'none';
+			document.getElementById('tanxCase').style.display = 'none';
+		}
+
 		//change text and opacity to one
-		if(isZoomed)
-		{
-			document.getElementById('title').innerHTML = 'Page Two.';
-			document.getElementsByTagName('p')[0].innerHTML = "Page 2 paragraph."
-		}
-		else
-		{
-			document.getElementById('title').innerHTML = 'First Page.';
-			document.getElementsByTagName('p')[0].innerHTML = "Lorem ipsum dolor sit amet, an option dissentiet usu. Facete abhorreant te vis, cu mentitum instructior vis. Vis esse cibo clita cu. His in prima vituperata, utroque constituto disputando duo ei, appetere atomorum et vel. Omnis expetendis te nam, posse neglegentur vix at. Et duo soleat utroque detraxit.Ut eos erat persius. Ad per augue malorum. Mea mutat vocibus vituperata te, mea quis sint augue in. Sit et vidit liber atomorum."
-		}
-		document.getElementById('title').style.opacity = 1;
-		document.getElementsByClassName('text')[0].style.opacity = 1;
+		// if(isZoomed)
+		// {
+		// 	document.getElementById('title').innerHTML = 'Page Two.';
+		// 	document.getElementsByTagName('p')[0].innerHTML = "Page 2 paragraph."
+		// }
+		// else
+		// {
+		// 	document.getElementById('title').innerHTML = 'First Page.';
+		// 	document.getElementsByTagName('p')[0].innerHTML = "Lorem ipsum dolor sit amet, an option dissentiet usu. Facete abhorreant te vis, cu mentitum instructior vis. Vis esse cibo clita cu. His in prima vituperata, utroque constituto disputando duo ei, appetere atomorum et vel. Omnis expetendis te nam, posse neglegentur vix at. Et duo soleat utroque detraxit.Ut eos erat persius. Ad per augue malorum. Mea mutat vocibus vituperata te, mea quis sint augue in. Sit et vidit liber atomorum."
+		// }
+		// document.getElementById('title').style.opacity = 1;
+		// document.getElementsByClassName('text')[0].style.opacity = 1;
 	}, 2000)
 	// setTimeout(createRandomDivs, 3000);
 	// createRandomDivs();
@@ -99,17 +134,18 @@ function zoomAllRandomDivs()
 		var newZ;
 		if(isZoomed)
 		{
-			newZ = zPositions[i]-1000;
+			newZ = zPositions[i]-50;
 			zPositions[i] = newZ;
 		}
 		else
 		{
-			newZ = zPositions[i]+1000;
+			newZ = zPositions[i]+50;
 			zPositions[i] = newZ;
 		}
 		// newZ = zPositions[i]+1000;
 			// zPositions[i] = newZ;
-		elementsToTransition[i].style.transform = "translateZ("+newZ+"px)";
+		// elementsToTransition[i].style.transform = "translateZ("+newZ+"px)";
+		elementsToTransition[i].style.transform = "translateZ("+newZ+"vw)";
 	}
 	isZoomed = !isZoomed;
 }
