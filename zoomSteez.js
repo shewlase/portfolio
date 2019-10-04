@@ -1,7 +1,8 @@
 
 
 var divAmount = 150;
-var colours = ['#593F62','#7B6D8D','#8499B1'];
+                       //light to dark ->
+var colours = ['#8499B1','#7B6D8D', '#593F62'];
 //89, 63, 98    123, 109, 141     132, 153, 177
 init();
 var zPositions;
@@ -14,7 +15,8 @@ function init()
 	screenHeight = window.innerHeight;
 
 	//largest difference between z positions
-	var zRange = 1600;
+	// var zRange = 1600;
+	var zRange = 100;
 	var zStart = -(0.6*zRange); //start with negative values
 	zPositions = [];
 	var zPosition = zStart;
@@ -39,7 +41,8 @@ function init()
 		// var zPosition = Math.random()*800-400;
 		// zPosition = i*(zRange/divAmount);
 		zPosition += (zRange/divAmount);
-		newDiv.style.transform = "translateZ("+zPosition+"px)";
+		// newDiv.style.transform = "translateZ("+zPosition+"px)";
+		newDiv.style.transform = "translateZ("+zPosition+"vw)";
 		zPositions.push(zPosition);
 
 		var randomColour = colours[Math.floor(Math.random() * 3)];
@@ -76,7 +79,6 @@ function goNextPage()
 		{
 			document.getElementById('title').innerHTML = 'First Page.';
 			document.getElementsByTagName('p')[0].innerHTML = "Lorem ipsum dolor sit amet, an option dissentiet usu. Facete abhorreant te vis, cu mentitum instructior vis. Vis esse cibo clita cu. His in prima vituperata, utroque constituto disputando duo ei, appetere atomorum et vel. Omnis expetendis te nam, posse neglegentur vix at. Et duo soleat utroque detraxit.Ut eos erat persius. Ad per augue malorum. Mea mutat vocibus vituperata te, mea quis sint augue in. Sit et vidit liber atomorum."
-
 		}
 		document.getElementById('title').style.opacity = 1;
 		document.getElementsByClassName('text')[0].style.opacity = 1;
