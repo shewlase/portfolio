@@ -150,13 +150,13 @@ function zoomAllRandomDivs()
 	isZoomed = !isZoomed;
 }
 
-window.onmousemove = function( event ) {
-
-	var mouseX = event.pageX/screenWidth;
-	var mouseY = event.pageY/screenHeight;
-
-	var originX = (mouseX * 7) + 40;
-	var originY = (mouseY * 10) + 40;
-
-	document.body.style.perspectiveOrigin = originX+'% '+originY+'% ';
-};
+// window.onmousemove = function( event ) {
+//
+// 	var mouseX = event.pageX/screenWidth;
+// 	var mouseY = event.pageY/screenHeight;
+//
+// 	var originX = (mouseX * 7) + 40;
+// 	var originY = (mouseY * 10) + 40;
+//
+// 	document.body.style.perspectiveOrigin = originX+'% '+originY+'% ';
+// };
