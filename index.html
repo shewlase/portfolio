@@ -15,121 +15,128 @@
 		<!-- <script src="scrollSnap.js"></script> -->
 	</head>
 	<body>
+		<div id='perspective'>
+			<div id="top" class='animatedTop'>
 
-		<div id="top" class='animatedTop'>
-			<canvas id="myCanvas" style="">
-				Your browser does not support canvas.
-			</canvas>
-			<canvas id="staticStarCanvas" style="">
-				Your browser does not support canvas.
-			</canvas>
+				<img id="down" src="down.png" onclick="scrollToMain()">
 
-			<img id="down" src="down.png" onclick="scrollToMain()">
-
-			<div class="icons">
-				<div class="mainSquare" onclick='goNextPage("siteme")'>
-					<div class = "circleDiv firstCircle animated">
-						<img class = "mainImage animated" src="press2.png">
-						<h3 class = "animated"> SiteMe </h3>
-						<p class = "animated">Back to basics design toolkit.</p>
-					</div>
-				</div>
-				<div class=" mainSquare" onclick='goNextPage("tanx")'>
-					<div class = "circleDiv animated games">
-						<img class = "mainImage animated " src="tanx.png">
-						<h3 class = "animated"> Tanx </h3>
-						<p class = "animated">Multiplayer, PvP, action game.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-
-		<img id = 'cvIcon' class = 'menuIcons' alt='cv image' src='cv.png'>
-		<img id = 'contactIcon' class = 'menuIcons' alt='mail' src='mail.png'>
-		<a href="https://github.com/shewlase/">
-			<img id = 'githubIcon' class = 'menuIcons' alt='github' src='github.png'>
-		</a>
-
-		<h1 id="mainTitle" onclick='goNextPage("home")'>Kauri B.</h1>
-		<h4 class="">Web Developer.</h4>
-
-
-		<div id='siteMeCase' class='caseStudy animatedTop'>
-			<h1>SiteMe</h1>
-			<p>Website prototyper aimed at encouraging children to learn web design and development.</br> Will eventually be able to export to real HTML and CSS files enabling publishable websites.</p>
- 			<iframe class='caseVid' src='https://www.youtube.com/embed/xP2n7oTI0HI' frameborder="0"></iframe>
-			<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/xP2n7oTI0HI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-			<h1></h1>
-			<img src='DOM JACOB.jpg' style='position: relative;'>
-			<img src='wax sitemed.JPG' style='position: relative;'>
-			<img src='randomSchemes.png' style='width: 90%;'>
-		</div>
-
-		<div id='tanxCase' class='caseStudy animatedTop'>
-			<h1>Tanx</h1>
-			<p>Multiplayer action game with multiple game types and a 4 stage single player mode. Touchscreen ready.</p>
-			<iframe class='caseVid' src='https://www.youtube.com/embed/xP2n7oTI0HI' frameborder="0"></iframe>
-			<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/xP2n7oTI0HI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-			<h1></h1>
-			<img src='DOM JACOB.jpg' style='position: relative;'>
-			<img src='wax sitemed.JPG' style='position: relative;'>
-		</div>
-
-
-		<div id="main">
-			<div class="icons">
-				<div class="mainSquare">
-					<div class = "circleDiv firstCircle animated">
-						<img class = "mainImage animated" src="code.png">
-						<h3 class = "animated"> Web </h3>
-					</div>
-						<a href="http://kaurib.com/michellemakeup/">
-						<div class = "topLeft subCircleDiv sub subImageAnimated">
-							<img class = "subImageAnimated sub3d" src="makeup2.png">
+				<div class="icons animatedTop">
+					<div class="mainSquare" onclick='goNextPage("siteme")'>
+						<div class = "circleDiv firstCircle animated">
+							<img class = "mainImage animated" src="siteme.png">
+							<h3 class = "animated"> SiteMe </h3>
+							<p class = "animated">Back to basics design toolkit.</p>
 						</div>
-						</a>
-						<!-- <img class = "topLeft subImage subImageAnimated" src="screen.png"> -->
-						<a href="https://codepen.io/kauri/">
-						<div class = "botRight subCircleDiv sub subImageAnimated subGames">
-							<img class = "subImageAnimated sub3d" src="codepen.png">
-
-						</div></a>
-						<a href="http://kaurib.com/central">
-						<div class = "topRight subCircleDiv sub subImageAnimated subOther">
-							<img class = "subImageAnimated sub3d" src="cook2.png">
-
-						</div></a>
-						<!-- <img class = "botRight subImage subImageAnimated" src="games.png"> -->
-						<!-- <div class = "circleDiv subImage animated topRight"></div> -->
-				</div>
-				<div class=" mainSquare">
-					<div class = "circleDiv animated games">
-						<img class = "mainImage animated " src="games3.png">
-						<h3 class = "animated"> Games </h3>
 					</div>
-					<!-- <img class = "botRight subImage subImageAnimated" src="headphones.png">
-					<img class = "topRight subImage subImageAnimated" src="email.png">
-					<img class = "topLeft subImage subImageAnimated" src="screen.png">
-					 -->
-					<!-- <div class = "botRight subCircleDiv sub subImageAnimated subGames">
-							<img class = "subImageAnimated sub3d" src="games2.png">
-					</div> -->
-					<a href="http://kaurib.com/tanx">
-					<div class = "topRight subCircleDiv sub subImageAnimated subGames">
-						<img class = "subImageAnimated sub3d" src="tanx.png">
-					</div></a>
-					<!-- <a href="http://kaurib.com/fly">
-					<div class = "topRight subCircleDiv sub subImageAnimated">
-						<img class = "subImageAnimated sub3d" src="ufp.png">
-					</div></a>	 -->
-					<a href="http://kaurib.com/pressthis">
-					<div class = "botLeft subCircleDiv sub subImageAnimated subOther">
-						<img class = "subImageAnimated sub3d" src="press2.png">
-					</div></a>
+					<div class="mainSquare" onclick='goNextPage("tanx")'>
+						<div class = "circleDiv animated games">
+							<img class = "mainImage animated " src="tanx.png">
+							<h3 class = "animated"> Tanx </h3>
+							<p class = "animated">Multiplayer, PvP, action game.</p>
+						</div>
+					</div>
 				</div>
 			</div>
-			<!-- <div class="overlay" style="top:100vh;"></div> -->
+
+			<div id='siteMeCase' class='caseStudy animatedTop'>
+				<h1>SiteMe</h1>
+				<p>Website prototyper aimed at encouraging children to learn web design and development.</br> Will eventually be able to export to real HTML and CSS files enabling publishable websites.</p>
+				<a target="_blank" href="https://kaurib.com/siteme">
+				<button class="button animated">
+						VIEW SITE</button></a>
+				<iframe class='caseVid' src='https://www.youtube.com/embed/xP2n7oTI0HI' frameborder="0"></iframe>
+				<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/xP2n7oTI0HI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+				<h1></h1>
+				<img src='food.jpg' style='position: relative;'>
+				<img src='wax sitemed.JPG' style='position: relative;'>
+				<img src='randomSchemes.png' style='width: 90%;'>
+			</div>
+
+			<div id='tanxCase' class='caseStudy animatedTop'>
+				<h1>Tanx</h1>
+				<p>Multiplayer action game with multiple game types and a 4 stage single player mode. Touchscreen ready.</p>
+				<a target="_blank" href="https://kaurib.com/tanx">
+						<button class="button animated">
+							PLAY NOW</button>
+				</a>
+				<iframe class='caseVid' src='https://www.youtube.com/embed/xP2n7oTI0HI' frameborder="0"></iframe>
+				<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/xP2n7oTI0HI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+				<h1></h1>
+
+				<img src='wax sitemed.JPG' style='position: relative;'>
+			</div>
+
+
+			<div id="main">
+				<div class="icons">
+					<div class="mainSquare">
+						<div class = "circleDiv firstCircle animated">
+							<img class = "mainImage animated" src="code.png">
+							<h3 class = "animated"> Web </h3>
+						</div>
+							<a href="http://kaurib.com/michellemakeup/">
+							<div class = "topLeft subCircleDiv sub subImageAnimated">
+								<img class = "subImageAnimated sub3d" src="makeup2.png">
+							</div>
+							</a>
+							<!-- <img class = "topLeft subImage subImageAnimated" src="screen.png"> -->
+							<a href="https://codepen.io/kauri/">
+							<div class = "botRight subCircleDiv sub subImageAnimated subGames">
+								<img class = "subImageAnimated sub3d" src="codepen.png">
+
+							</div></a>
+							<a href="http://kaurib.com/central">
+							<div class = "topRight subCircleDiv sub subImageAnimated subOther">
+								<img class = "subImageAnimated sub3d" src="cook2.png">
+
+							</div></a>
+							<!-- <img class = "botRight subImage subImageAnimated" src="games.png"> -->
+							<!-- <div class = "circleDiv subImage animated topRight"></div> -->
+					</div>
+					<div class=" mainSquare">
+						<div class = "circleDiv animated games">
+							<img class = "mainImage animated " src="games3.png">
+							<h3 class = "animated"> Games </h3>
+						</div>
+						<!-- <img class = "botRight subImage subImageAnimated" src="headphones.png">
+						<img class = "topRight subImage subImageAnimated" src="email.png">
+						<img class = "topLeft subImage subImageAnimated" src="screen.png">
+						 -->
+						<!-- <div class = "botRight subCircleDiv sub subImageAnimated subGames">
+								<img class = "subImageAnimated sub3d" src="games2.png">
+						</div> -->
+						<a href="http://kaurib.com/tanx">
+						<div class = "topRight subCircleDiv sub subImageAnimated subGames">
+							<img class = "subImageAnimated sub3d" src="tanx.png">
+						</div></a>
+						<!-- <a href="http://kaurib.com/fly">
+						<div class = "topRight subCircleDiv sub subImageAnimated">
+							<img class = "subImageAnimated sub3d" src="ufp.png">
+						</div></a>	 -->
+						<a href="http://kaurib.com/pressthis">
+						<div class = "botLeft subCircleDiv sub subImageAnimated subOther">
+							<img class = "subImageAnimated sub3d" src="press2.png">
+						</div></a>
+					</div>
+				</div>
+				<!-- <div class="overlay" style="top:100vh;"></div> -->
+			</div>
+		</div>
+
+		<div class='topFixed'>
+
+
+			<div id='behindCircle' class='bgCircle'></div>
+			<div id='behindCircleTwo' class='bgCircle'></div>
+
+			<img id = 'cvIcon' class = 'menuIcons' alt='cv image' src='cv.png'>
+			<img id = 'contactIcon' class = 'menuIcons' alt='mail' src='mail.png'>
+			<a href="https://github.com/shewlase/">
+				<img id = 'githubIcon' class = 'menuIcons' alt='github' src='github.png'>
+			</a>
+
+			<h1 id="mainTitle" onclick='goNextPage("home")'>Kauri B.</h1>
+			<h4 class="">Web Developer.</h4>
 		</div>
 		<p id=""></p>
 		<script type="text/javascript" src="zoomSteez.js"></script>

@@ -53,9 +53,12 @@ function init()
 		// var title = document.querySelector("#backgroundCircles");
 		// var child = document.querySelector("#circlesBefore");
 		// var parent = document.querySelector("#backgroundCircles");
-		var title = document.querySelector("#top");
+		// var parent = document.querySelector("#perspective");
+		var beforeThis = document.querySelector("#down");
+		document.querySelector("#top").insertBefore(newDiv,beforeThis);
+		// parent.appendChild(newDiv);
 
-		document.body.insertBefore(newDiv,title);
+
 		// parent.insertBefore(newDiv,child);
 		// console.log(zPosition);
 	}
@@ -68,7 +71,10 @@ function goNextPage(nextPage)
 	//fade h1 and text, replace with new page
 	// document.getElementById('title').style.opacity = 0;
 	// document.getElementsByClassName('text')[0].style.opacity = 0;
-	document.getElementById('top').style.opacity = 0;
+	let topSection = document.getElementsByClassName('icons')[0];
+
+	// document.getElementById('top').style.opacity = 0;
+	topSection.style.opacity = 0;
 	document.getElementById('main').style.display = 'none';
 	if(nextPage == 'siteme')
 	{
@@ -80,7 +86,8 @@ function goNextPage(nextPage)
 	}
 	else if (nextPage == 'home')
 	{
-		document.getElementById('top').style.display = 'block';
+		// document.getElementById('top').style.display = 'block';
+		topSection.style.display = 'block';
 		document.getElementById('main').style.display = 'block';
 		document.getElementById('siteMeCase').style.opacity = 0;
 		document.getElementById('tanxCase').style.opacity = 0;
@@ -89,17 +96,20 @@ function goNextPage(nextPage)
 		//after transition, show next page
 		if(nextPage == 'siteme')
 		{
-			document.getElementById('top').style.display = 'none';
+			// document.getElementById('top').style.display = 'none';
+			topSection.style.display = 'none';
 			document.getElementById('siteMeCase').style.opacity = 1;
 		}
 		else if (nextPage == 'tanx')
 		{
-			document.getElementById('top').style.display = 'none';
+			// document.getElementById('top').style.display = 'none';
+			topSection.style.display = 'none';
 			document.getElementById('tanxCase').style.opacity = 1;
 		}
 		else if (nextPage == 'home')
 		{
-			document.getElementById('top').style.opacity = 1;
+			topSection.style.opacity = 1;
+			// document.getElementById('top').style.opacity = 1;
 			document.getElementById('siteMeCase').style.display = 'none';
 			document.getElementById('tanxCase').style.display = 'none';
 		}
