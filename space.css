@@ -567,7 +567,7 @@ a:visited {
 	position: relative;
 	width: 73.5vw;
 	height: 42vw;
-	left: 5vw;
+	margin-left: 8.25vw;
 }
 
 .caseStudy img
@@ -615,8 +615,7 @@ a:visited {
 .button
 {
 	position: absolute;
-	right: 15vw;
-	top: 15vw;
+
 	background-color: Transparent;
 	border: solid;
 	border-color: #7B6D8D;
@@ -632,6 +631,18 @@ a:visited {
 	cursor: pointer;
 	display: inline;
 	width:11vw;
+}
+
+.rightButton
+{
+	right: 9vw;
+	top: 15vw;
+}
+
+.leftButton
+{
+	right: 22vw;
+	top: 15vw;
 }
 
 .button:hover
