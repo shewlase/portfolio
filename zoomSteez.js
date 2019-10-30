@@ -8,11 +8,17 @@ init();
 var zPositions;
 var screenWidth;
 var screenHeight;
+var currentPage;
 //need parameter to say which page its for
 function init()
 {
 	screenWidth = window.innerWidth;
 	screenHeight = window.innerHeight;
+
+
+	currentPage = 'home';
+	// state = { currentPage: 'home' };
+	window.history.replaceState(currentPage, null, "");
 
 	//largest difference between z positions
 	// var zRange = 1600;
@@ -79,10 +85,12 @@ function goNextPage(nextPage)
 	if(nextPage == 'siteme')
 	{
 		document.getElementById('siteMeCase').style.display = 'block';
+		window.history.pushState(currentPage, "SiteMe", "");
 	}
 	else if (nextPage == 'tanx')
 	{
 		document.getElementById('tanxCase').style.display = 'block';
+		window.history.pushState(currentPage, "Tanx", "");
 	}
 	else if (nextPage == 'home')
 	{
@@ -92,6 +100,7 @@ function goNextPage(nextPage)
 		document.getElementById('siteMeCase').style.opacity = 0;
 		document.getElementById('tanxCase').style.opacity = 0;
 	}
+	currentPage = nextPage;
 	setTimeout(function(){
 		//after transition, show next page
 		if(nextPage == 'siteme')
@@ -114,6 +123,7 @@ function goNextPage(nextPage)
 			document.getElementById('tanxCase').style.display = 'none';
 		}
 
+
 		//change text and opacity to one
 		// if(isZoomed)
 		// {
@@ -131,6 +141,15 @@ function goNextPage(nextPage)
 	// setTimeout(createRandomDivs, 3000);
 	// createRandomDivs();
 }
+
+window.onpopstate = function (event)
+{
+  if (event.state)
+	{
+    currentPage = event.state;
+  }
+  goNextPage(currentPage);
+};
 
 var isZoomed = false;
 function zoomAllRandomDivs()
