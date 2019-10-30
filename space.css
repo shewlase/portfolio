@@ -309,8 +309,10 @@ a:visited {
 
 .mainImage
 {
-	height: 15vw;
-	width: 15vw;
+	height: 60%;
+	width: 60%;
+	/* height: 15vw;
+	width: 15vw; */
 	margin: auto;
 	position: absolute;
 	top: -10%; left: 0; bottom: 0; right: 0;
@@ -545,7 +547,7 @@ a:visited {
 .caseStudy h1
 {
 	position: relative;
-	width: 85%;
+	/* width: 85%; */
 	text-align: center;
 	color: #7B6D8D;
 }
@@ -662,6 +664,7 @@ a:visited {
 }
 
 
+
 @keyframes perspective
 {
 	 0% { perspective-origin: 40% 15%;}
@@ -669,4 +672,181 @@ a:visited {
 	 100% { perspective-origin: 40% 15%;}
 }
 
-----------------------------------------------------------
+@keyframes perspectiveSmallScreens
+{
+	 0% { perspective-origin: 20% 15%;}
+	 50% { perspective-origin: 90% 15%;}
+	 100% { perspective-origin: 20% 15%;}
+}
+
+@keyframes rotateIcons
+{
+	 0% { transform: rotateY(-10deg) rotateX(-5deg);}
+	 50% { transform: rotateY(10deg) rotateX(5deg);}
+	 100% { transform: rotateY(-10deg) rotateX(-5deg);}
+}
+
+
+
+@media screen and (max-width: 500px)
+{
+	h3
+	{
+		font-size: 8vw;
+	}
+
+	p
+	{
+		font-size: 3.5vw;
+		width: 70%;
+	}
+
+	.menuIcons {
+    width: 10vw;
+    top: 1vh;
+	}
+
+	#contactIcon {
+    right: 30vw;
+	}
+	#cvIcon {
+    right: 16.5vw;
+}
+
+#behindCircleFour {
+	width: 32vw;
+	height: 32vw;
+	top: -13vw;
+	right: 14vw;
+}
+
+#behindCircleThree {
+	width: 35vw;
+	height: 35vw;
+	top: -14vw;
+	right: -8vw;
+}
+
+#mainTitle {
+    font-size: 8vw;
+    top: -4vw;
+	}
+
+	#behindCircle {
+    width: 25vw;
+    height: 25vw;
+    top: -5vw;
+    left: -5vw;
+}
+
+#behindCircleTwo {
+    width: 22vw;
+    height: 22vw;
+    top: -3vw;
+    left: 12vw;
+}
+
+	h4
+	{
+		font-size: 4vw;
+    top: 4.5vw;
+    left: 2vw;
+	}
+
+
+	.icons
+	{
+		display: block;
+		top: -1vh;
+		/* animation: pers 5s infinite; */
+
+	}
+
+	.mainSquare:nth-of-type(2)
+	{
+		margin-top: 10vh;
+	}
+
+	.mainSquare
+	{
+		height: 45vw;
+		width: 45vw;
+		animation: rotateIcons 5s infinite;
+	}
+
+	#top
+	{
+		perspective: 120vw;
+		animation: perspectiveSmallScreens 15s infinite;
+	}
+
+	#main
+	{
+		perspective: 120vw;
+	}
+
+	.caseStudy
+	{
+		top: 25vw;
+	}
+
+	.caseStudy h1
+	{
+		font-size: 8vw;
+	}
+
+	.caseStudy p
+	{
+		font-size: 16px;
+		width: 80%;
+		left: 10%;
+	}
+
+	.button
+	{
+		position: relative;
+		top:0;
+		font-size: 3vw;
+		width: 25vw;
+		border-width: 0.7vw;
+	}
+
+	.leftButton
+	{
+		/* top:0; */
+		right: 0;
+		margin-left: 20vw;
+		margin-top: 5vw;
+	}
+
+	.rightButton
+	{
+		right: 0;
+	}
+
+	.caseVid
+	{
+		margin-top: 10vw;
+	}
+
+	.caseStudy img {
+    width: 80vw;
+	}
+
+	.mainSquare:hover .sub
+	{
+		width: 20vw;
+		height: 20vw;
+	}
+
+	.sub
+	{
+		width: 10vw;
+		height: 10vw;
+	}
+
+	/* .mainImage
+	{
+		width
+	} */
+}

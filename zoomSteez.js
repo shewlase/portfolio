@@ -95,7 +95,15 @@ function goNextPage(nextPage)
 	else if (nextPage == 'home')
 	{
 		// document.getElementById('top').style.display = 'block';
-		topSection.style.display = 'flex';
+		//check if mobile size
+		if(screenWidth < 601)
+		{
+			topSection.style.display = 'block';
+		}
+		else
+		{
+			topSection.style.display = 'flex';
+		}
 		document.getElementById('main').style.display = 'block';
 		document.getElementById('siteMeCase').style.opacity = 0;
 		document.getElementById('tanxCase').style.opacity = 0;
