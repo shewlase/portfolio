@@ -26,7 +26,7 @@
 						<div class = "circleDiv firstCircle animated">
 							<img class = "mainImage animated" src="siteme.png">
 							<h3 class = "animated"> SiteMe </h3>
-							<p class = "animated">Back to basics design toolkit.</p>
+							<p class = "animated">Back to basics website builder.</p>
 						</div>
 					</div>
 					<div class="mainSquare" onclick='goNextPage("tanx")'>
@@ -41,7 +41,10 @@
 
 			<div id='siteMeCase' class='caseStudy animatedTop'>
 				<h1>SiteMe</h1>
-				<p>An easy to use yet versatile website builder. Will eventually be able to export to real HTML and CSS files enabling publishable websites.</p>
+				<p class='caseDescription'>An easy to use yet versatile website builder.
+					Aims to be easy enough for children to learn yet have enough functionality
+					to create full websites. Will eventually be able to publish
+					the finished product directly from the app.</p>
 				<a target="_blank" href="https://kaurib.com/siteme">
 				<button class="button animated leftButton">
 						VIEW SITE</button></a>
@@ -50,15 +53,23 @@
 						GITHUB</button></a>
 				<iframe class='caseVid' src='https://www.youtube.com/embed/-kMmGfWZVTQ' frameborder="0"></iframe>
 				<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/xP2n7oTI0HI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-				<h1></h1>
-				<img src='food.jpg' style='position: relative;'>
+				<h1>Next Steps</h1>
+				<div class='textAndImage'>
+					<p><span class="bold">Exporting/saving.</span> As pdf/images for designers or HTML, CSS and Javascript for developers/to be able to publish website directly.
+				 	<br><br><span class="bold">Templates.</span> Save even more time by having common structures available.
+		 			<br><br><span class="bold">Gamification.</span> Teaching the use of the software via a game could even encourage children to learn how to make/design websites.
+					Starting from placing basic shapes to eventually being able to build an entire website from a given design document.
+					</p>
+					<img class='rightImage' src='food2.jpg' style=''>
+				</div>
+				<!-- <img src='food.jpg' style='position: relative;'>
 				<img src='wax sitemed.JPG' style='position: relative;'>
-				<img src='randomSchemes.png' style='width: 90%;'>
+				<img src='randomSchemes.png' style='width: 90%;'> -->
 			</div>
 
 			<div id='tanxCase' class='caseStudy animatedTop'>
 				<h1>Tanx</h1>
-				<p>Multiplayer action game with multiple game types and a 4 stage single player mode. Touchscreen ready.</p>
+				<p class='caseDescription'>Multiplayer action game with multiple game types and a 4 stage single player mode. Touchscreen ready.</p>
 				<a target="_blank" href="https://kaurib.com/tanx">
 						<button class="button animated leftButton">
 							PLAY NOW</button>
@@ -68,8 +79,37 @@
 						GITHUB</button></a>
 				<iframe class='caseVid' src='https://www.youtube.com/embed/-kMmGfWZVTQ' frameborder="0"></iframe>
 				<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/xP2n7oTI0HI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-				<h1></h1>
-				<img src='wax sitemed.JPG' style='position: relative;'>
+				<h1>Challenges</h1>
+				<div class='textAndImage'>
+					<p><span class="bold">Simulate blocked vision.</span> In certain game
+						modes it didn't make sense for the player to be able to see the whole map.
+					 This required me to block out objects that were behind walls/other objects.
+				 <br><br>• To draw the vision blocking polygon, only the two X points were unknown.
+		 			<br><br>• The first step was to calculate the angle of the player to corner of wall.
+					<br><br>&nbsp &nbsp fogAngle = Math.atan2(wallCornerX - (playerCenterX), -(wallCornerY - (playerCenterY)));
+					<br><br>• So then the Y position of X is: playerCenterY - O and to get O...
+					<br><br>&nbsp &nbsp &nbsp &nbsp Math.tan(fogAngle) * playerCenterX;
+					</p>
+					<img class='rightImage' src='tanxFog.png' style=''>
+					</div>
+
+
+					<div class='textAndImage'>
+				<p><span class="bold">Latency.</span> After trying to render each player
+					everytime they sent their new location to the server (which totally
+					destroyed all animation) I instead only broadcasted player inputs
+					(e.g. key presses).
+					<br><br>This resulted in an inconsistency in player positions
+				E.g. if someone holds down a movement direction and releases 0.5 seconds
+				later, but the other client doesn’t register the release till 0.8 seconds
+				later, it will have moved for an extra 0.3 seconds on the other clients
+				screen.
+				<br><br>To make up for this, each client sends their position to the server and
+				every so often each client checks the position of other players on their
+				screen against these sent positions
+					</p>
+					<img class='rightImage' src='tanxLag.jpg' style=''>
+				</div>
 			</div>
 
 
