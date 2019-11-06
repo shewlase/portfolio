@@ -80,6 +80,7 @@ function goNextPage(nextPage)
 	let topSection = document.getElementsByClassName('icons')[0];
 
 	// document.getElementById('top').style.opacity = 0;
+	document.body.scrollTop = 0;
 	topSection.style.opacity = 0;
 	document.getElementById('main').style.display = 'none';
 	if(nextPage == 'siteme')

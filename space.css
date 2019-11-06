@@ -95,6 +95,7 @@ a:visited {
 .bold
 {
 	font-weight: bolder;
+	color: #7B6D8D;
 }
 
 .textAndImage
@@ -581,8 +582,10 @@ a:visited {
 	color: black;
 	position: relative;
 	transform: translateZ(0vw);
-	font-size: 16px;
+	font-size: 20px;
 	/* font-size: 1.7vw; */
+
+	margin-top: 0;
 	margin-bottom: 5vw;
 	margin-left: 7vw;
 	left: 0;
@@ -664,7 +667,7 @@ a:visited {
 	cursor: pointer;
 	display: inline;
 	width:11vw;
-	top: 12vw;
+	top: 13vw;
 }
 
 .rightButton

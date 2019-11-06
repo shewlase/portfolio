@@ -7,7 +7,7 @@
 		<link rel="icon" href="fav.gif" type="image/gif">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Kauri Ché Beguely : Website Development</title>
+		<title>Kauri Ché Beguely : Website Development Portfolio</title>
 		<script src="jquery-1.8.2.min.js"></script>
 		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 		<!-- <script src="jquery-1.8.2.min.js"></script> -->
@@ -86,10 +86,10 @@
 					 This required me to block out objects that were behind walls/other objects.
 				 <br><br>• To draw the vision blocking polygon, only the two X points were unknown.
 		 			<br><br>• The first step was to calculate the angle of the player to corner of wall.
-					<br><br>&nbsp &nbsp fogAngle = Math.atan2(wallCornerX - (playerCenterX), -(wallCornerY - (playerCenterY)));
-					<br><br>• So then the Y position of X is: playerCenterY - O and to get O...
-					<br><br>&nbsp &nbsp &nbsp &nbsp Math.tan(fogAngle) * playerCenterX;
-					</p>
+					<br><br>&nbsp &nbsp <span class="bold">fogAngle = Math.atan2(wallCornerX - playerCenterX, -(wallCornerY - playerCenterY);</span>
+					<br><br>• So then the Y position of X is...
+					<br><br><span class="bold">&nbsp &nbsp playerCenterY - (Math.tan(fogAngle) * playerCenterX);
+					</span></p>
 					<img class='rightImage' src='tanxFog.png' style=''>
 					</div>
 
